@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MasterViewController.swift
 //  linky2
 //
 //  Created by David Ladowitz on 4/13/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MasterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func jsLinkAction() {
-        println("you pushed the JS button")
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let button = sender! as! UIButton
+        
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.topic = button.titleForState(.Normal)!
     }
 
 }
