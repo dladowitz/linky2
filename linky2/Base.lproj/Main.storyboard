@@ -18,6 +18,9 @@
                                 <state key="normal" title="node">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cl2-AC-xle" kind="push" id="oI1-Ao-VUa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PeA-0T-KUw">
                                 <rect key="frame" x="53" y="293" width="42" height="30"/>
@@ -25,6 +28,9 @@
                                 <state key="normal" title="HTML">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cl2-AC-xle" kind="push" id="zMa-Fa-JQF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xod-bM-Lg8">
                                 <rect key="frame" x="238" y="293" width="35" height="30"/>
@@ -32,6 +38,9 @@
                                 <state key="normal" title="Swift">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cl2-AC-xle" kind="push" id="XZI-i9-1Bc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yFb-Hc-PUY">
                                 <rect key="frame" x="59" y="496" width="31" height="30"/>
@@ -39,6 +48,9 @@
                                 <state key="normal" title="CSS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cl2-AC-xle" kind="push" id="iSZ-PJ-8JB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWb-J4-Vpo">
                                 <rect key="frame" x="240" y="496" width="30" height="30"/>
@@ -46,6 +58,9 @@
                                 <state key="normal" title="iOS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cl2-AC-xle" kind="push" id="ecm-8Q-Y7k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2Z-1P-cSt">
                                 <rect key="frame" x="39" y="87" width="71" height="30"/>
@@ -106,4 +121,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="oI1-Ao-VUa"/>
+    </inferredMetricsTieBreakers>
 </document>
