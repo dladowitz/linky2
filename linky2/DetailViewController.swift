@@ -7,25 +7,51 @@
 //
 
 import UIKit
+import Foundation
 
 class DetailViewController: UIViewController {
-    
+    @IBOutlet weak var topicTitleLabel: UILabel!
+    @IBOutlet weak var displayLabel: UILabel!
+
     var topic = "Unknown"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("Hey I'm in the detail view controller")
-        println("the topic is \(topic)")
 
+        topicTitleLabel.text = topic
+        downloadJSON()
+        println(displayLabel.text)
+        
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func downloadJSON(){
+        let baseURL = NSURL(string: "http://tradecraftmessagehub.com/sample/schweetchannel")
+//        let tradecraftURL = NSURL(string: coordinates, relativeToURL: baseURL)
+        
+        let sharedSession = NSURLSession.sharedSession()
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(baseURL!,
+            completionHandler:{(location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+                if error == nil {
+                    let dataObject = NSData(contentsOfURL: location)
+                    let topicArray: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSArray
+                    println(topicArray[0]["message_text"])
+
+                    
+                    var message = topicArray[0]["message_text"]! as! String
+                    self.displayLabel.text = message
+                }
+            }
+        )
+        downloadTask.resume()
+    }
 
     /*
     // MARK: - Navigation
