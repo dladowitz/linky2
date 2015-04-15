@@ -44,9 +44,11 @@ class DetailViewController: UIViewController {
                     let topicArray: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSArray
                     println(topicArray[0]["message_text"])
 
-                    
-                    var message = topicArray[0]["message_text"]! as! String
-                    self.displayLabel.text = message
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        var message = topicArray[0]["message_text"]! as! String
+                        self.displayLabel.text = message
+                    })
+
                 }
             }
         )
