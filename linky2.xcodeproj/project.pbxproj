@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630CD4431ADF60A200190585 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CD4421ADF60A200190585 /* Topic.swift */; };
 		632CC06C1ADC9C860089F8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CC06B1ADC9C860089F8B0 /* AppDelegate.swift */; };
 		632CC06E1ADC9C860089F8B0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CC06D1ADC9C860089F8B0 /* MasterViewController.swift */; };
 		632CC0711ADC9C860089F8B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632CC06F1ADC9C860089F8B0 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630CD4421ADF60A200190585 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		632CC0661ADC9C860089F8B0 /* linky2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linky2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632CC06A1ADC9C860089F8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632CC06B1ADC9C860089F8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				632CC06B1ADC9C860089F8B0 /* AppDelegate.swift */,
+				630CD4421ADF60A200190585 /* Topic.swift */,
 				632CC06D1ADC9C860089F8B0 /* MasterViewController.swift */,
 				632CC08D1ADD7D6F0089F8B0 /* DetailViewController.swift */,
 				632CC06F1ADC9C860089F8B0 /* Main.storyboard */,
@@ -218,6 +221,7 @@
 				632CC08E1ADD7D6F0089F8B0 /* DetailViewController.swift in Sources */,
 				632CC06E1ADC9C860089F8B0 /* MasterViewController.swift in Sources */,
 				632CC06C1ADC9C860089F8B0 /* AppDelegate.swift in Sources */,
+				630CD4431ADF60A200190585 /* Topic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,20 +9,30 @@
 import UIKit
 import Foundation
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet
+    var tableView: UITableView!
+    var items: [String] = ["We", "Heart", "Swift"]
+    var topicMessages: Topic?
+    
     @IBOutlet weak var topicTitleLabel: UILabel!
     @IBOutlet weak var displayLabel: UILabel!
+    
 
     var topic = "Unknown"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+    
         topicTitleLabel.text = topic
         downloadJSON()
         println(displayLabel.text)
         
-        // Do any additional setup after loading the view.
+        
+        
     }
     
 
@@ -33,7 +43,7 @@ class DetailViewController: UIViewController {
     
     
     func downloadJSON(){
-        let baseURL = NSURL(string: "http://tradecraftmessagehub.com/sample/schweetchannel")
+        let baseURL = NSURL(string: "http://tradecraftmessagehub.com/sample/engineering")
 //        let tradecraftURL = NSURL(string: coordinates, relativeToURL: baseURL)
         
         let sharedSession = NSURLSession.sharedSession()
@@ -42,10 +52,12 @@ class DetailViewController: UIViewController {
                 if error == nil {
                     let dataObject = NSData(contentsOfURL: location)
                     let topicArray: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSArray
-                    println(topicArray[0]["message_text"])
-
+                    
+                    self.topicMessages = Topic(messagesArray: topicArray)
+                    println(self.topicMessages!.resources)
+                    
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        var message = topicArray[0]["message_text"]! as! String
+                        var message = self.topicMessages!.resources[0]
                         self.displayLabel.text = message
                     })
 
@@ -53,6 +65,23 @@ class DetailViewController: UIViewController {
             }
         )
         downloadTask.resume()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        need a way to populate cell count. topicMessages is finished too late. 
+        return self.items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
     }
 
     /*
