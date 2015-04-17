@@ -12,13 +12,10 @@ import Foundation
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet
     var tableView: UITableView!
-    var items: [String] = []
+    var tableItems: [String] = []
     var topicMessages: Topic?
     
     @IBOutlet weak var topicTitleLabel: UILabel!
-    @IBOutlet weak var displayLabel: UILabel!
-    
-
     var topic = "Unknown"
 
     override func viewDidLoad() {
@@ -26,16 +23,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-    
         topicTitleLabel.text = topic
         downloadJSON()
-        println(displayLabel.text)
-        
-        
-        
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,7 +34,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func downloadJSON(){
-        let baseURL = NSURL(string: "http://tradecraftmessagehub.com/sample/engineering")
+        let baseURL = NSURL(string: "http://tradecraftmessagehub.com/linky/\(topic)")
 //        let tradecraftURL = NSURL(string: coordinates, relativeToURL: baseURL)
         
         let sharedSession = NSURLSession.sharedSession()
@@ -57,10 +48,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     println(self.topicMessages!.resources)
                     
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        var message = self.topicMessages!.resources[0]
-                        self.displayLabel.text = message
                         for messages in self.topicMessages!.resources {
-                            self.items.append(messages)
+                            self.tableItems.append(messages)
                         }
                         self.tableView.reloadData()
                     })
@@ -74,13 +63,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        need a way to populate cell count. topicMessages is finished too late. 
 //        return self.topicMessages!.resources.count
-        return self.items.count;
+        return self.tableItems.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.tableItems[indexPath.row]
         
         return cell
     }

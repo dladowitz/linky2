@@ -25,7 +25,7 @@ class MasterViewController: UIViewController {
         let button = sender! as! UIButton
         
         let detailViewController = segue.destinationViewController as! DetailViewController
-        detailViewController.topic = button.titleForState(.Normal)!
+        detailViewController.topic = button.titleForState(.Normal)!.lowercaseString
     }
 
 }
