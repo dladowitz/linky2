@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		630CD4421ADF60A200190585 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
-		630F60C41AE1783D001754EF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		630F60C41AE1783D001754EF /* get_request.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = get_request.playground; sourceTree = "<group>"; };
 		632CC0661ADC9C860089F8B0 /* linky2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linky2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632CC06A1ADC9C860089F8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632CC06B1ADC9C860089F8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				632CC0721ADC9C860089F8B0 /* Images.xcassets */,
 				632CC0741ADC9C860089F8B0 /* LaunchScreen.xib */,
 				632CC0691ADC9C860089F8B0 /* Supporting Files */,
-				630F60C41AE1783D001754EF /* MyPlayground.playground */,
+				630F60C41AE1783D001754EF /* get_request.playground */,
 			);
 			path = linky2;
 			sourceTree = "<group>";

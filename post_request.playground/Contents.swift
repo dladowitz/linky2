@@ -3,4 +3,3 @@
 import UIKit
 
 var str = "Hello, playground"
-println(str.lowercaseString)
