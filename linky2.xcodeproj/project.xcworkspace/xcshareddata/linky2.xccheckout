@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>129D95E9-6060-43CE-824B-36AC480975F4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>linky2</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F1FF3CE131843AD329D2A2161D0F72497A3344F0</key>
 		<string>github.com:dladowitz/linky2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>linky2.xcodeproj</string>
+	<string>linky2.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F1FF3CE131843AD329D2A2161D0F72497A3344F0</key>

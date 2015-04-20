@@ -1,8 +1,6 @@
 import UIKit
 
-let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
-let array = ["this","that"]
-println(array.randomItem())
+
 
 //
 //// This function does everything necessary to get messages from the server and update both our models and our views when they arrive.

@@ -35,7 +35,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func downloadJSON(){
         let baseURL = NSURL(string: "http://tradecraftmessagehub.com/linky/\(topic)")
-//        let tradecraftURL = NSURL(string: coordinates, relativeToURL: baseURL)
         
         let sharedSession = NSURLSession.sharedSession()
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(baseURL!,
@@ -61,13 +60,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        need a way to populate cell count. topicMessages is finished too late. 
-//        return self.topicMessages!.resources.count
         return self.tableItems.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        
         
         cell.textLabel?.text = self.tableItems[indexPath.row]
         
@@ -76,6 +75,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("You selected cell #\(indexPath.row)!")
+        
+        if let url = NSURL(string: tableItems[indexPath.row]){
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
 
     /*
