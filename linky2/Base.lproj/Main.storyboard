@@ -80,6 +80,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rails" translatesAutoresizingMaskIntoConstraints="NO" id="PjZ-X4-l0i">
                                 <rect key="frame" x="63" y="314" width="50" height="50"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CSS" translatesAutoresizingMaskIntoConstraints="NO" id="srW-0O-ca4">
+                                <rect key="frame" x="41" y="374" width="94" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HTML" translatesAutoresizingMaskIntoConstraints="NO" id="u87-75-Mvt">
+                                <rect key="frame" x="14" y="194" width="148" height="51"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Swift" translatesAutoresizingMaskIntoConstraints="NO" id="la3-II-lhZ">
+                                <rect key="frame" x="63" y="259" width="50" height="40"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -170,9 +179,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CSS" width="128" height="128"/>
+        <image name="HTML" width="128" height="128"/>
         <image name="Javascript" width="128" height="128"/>
         <image name="Node" width="128" height="128"/>
         <image name="Rails" width="128" height="128"/>
+        <image name="Swift" width="1280" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
