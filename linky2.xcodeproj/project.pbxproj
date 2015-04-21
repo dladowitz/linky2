@@ -15,6 +15,9 @@
 		632CC0761ADC9C860089F8B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632CC0741ADC9C860089F8B0 /* LaunchScreen.xib */; };
 		632CC0821ADC9C860089F8B0 /* linky2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CC0811ADC9C860089F8B0 /* linky2Tests.swift */; };
 		632CC08E1ADD7D6F0089F8B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CC08D1ADD7D6F0089F8B0 /* DetailViewController.swift */; };
+		63CB9B6C1AE6C3F300B2995A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB9B6B1AE6C3F300B2995A /* ShareViewController.swift */; };
+		63CB9B6E1AE6C3F300B2995A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CB9B6D1AE6C3F300B2995A /* MainInterface.storyboard */; };
+		63CB9B711AE6C3F300B2995A /* linky.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63CB9B671AE6C3F300B2995A /* linky.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +28,28 @@
 			remoteGlobalIDString = 632CC0651ADC9C860089F8B0;
 			remoteInfo = linky2;
 		};
+		63CB9B6F1AE6C3F300B2995A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 632CC05E1ADC9C860089F8B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63CB9B661AE6C3F300B2995A;
+			remoteInfo = linky;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63CB9B751AE6C3F300B2995A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				63CB9B711AE6C3F300B2995A /* linky.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		630CD4421ADF60A200190585 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -41,6 +65,12 @@
 		632CC0801ADC9C860089F8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632CC0811ADC9C860089F8B0 /* linky2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linky2Tests.swift; sourceTree = "<group>"; };
 		632CC08D1ADD7D6F0089F8B0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		63CB9B671AE6C3F300B2995A /* linky.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = linky.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CB9B6A1AE6C3F300B2995A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63CB9B6B1AE6C3F300B2995A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		63CB9B6D1AE6C3F300B2995A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		63CB9B761AE6C41600B2995A /* linky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = linky.entitlements; sourceTree = "<group>"; };
+		63CB9B771AE6C43A00B2995A /* linky2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = linky2.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +88,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63CB9B641AE6C3F300B2995A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +103,7 @@
 			children = (
 				632CC0681ADC9C860089F8B0 /* linky2 */,
 				632CC07E1ADC9C860089F8B0 /* linky2Tests */,
+				63CB9B681AE6C3F300B2995A /* linky */,
 				632CC0671ADC9C860089F8B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +113,7 @@
 			children = (
 				632CC0661ADC9C860089F8B0 /* linky2.app */,
 				632CC07B1ADC9C860089F8B0 /* linky2Tests.xctest */,
+				63CB9B671AE6C3F300B2995A /* linky.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +121,7 @@
 		632CC0681ADC9C860089F8B0 /* linky2 */ = {
 			isa = PBXGroup;
 			children = (
+				63CB9B771AE6C43A00B2995A /* linky2.entitlements */,
 				632CC06B1ADC9C860089F8B0 /* AppDelegate.swift */,
 				630CD4421ADF60A200190585 /* Topic.swift */,
 				632CC06D1ADC9C860089F8B0 /* MasterViewController.swift */,
@@ -120,6 +160,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63CB9B681AE6C3F300B2995A /* linky */ = {
+			isa = PBXGroup;
+			children = (
+				63CB9B761AE6C41600B2995A /* linky.entitlements */,
+				63CB9B6B1AE6C3F300B2995A /* ShareViewController.swift */,
+				63CB9B6D1AE6C3F300B2995A /* MainInterface.storyboard */,
+				63CB9B691AE6C3F300B2995A /* Supporting Files */,
+			);
+			path = linky;
+			sourceTree = "<group>";
+		};
+		63CB9B691AE6C3F300B2995A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63CB9B6A1AE6C3F300B2995A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,10 +189,12 @@
 				632CC0621ADC9C860089F8B0 /* Sources */,
 				632CC0631ADC9C860089F8B0 /* Frameworks */,
 				632CC0641ADC9C860089F8B0 /* Resources */,
+				63CB9B751AE6C3F300B2995A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				63CB9B701AE6C3F300B2995A /* PBXTargetDependency */,
 			);
 			name = linky2;
 			productName = linky2;
@@ -158,6 +219,23 @@
 			productReference = 632CC07B1ADC9C860089F8B0 /* linky2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		63CB9B661AE6C3F300B2995A /* linky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CB9B741AE6C3F300B2995A /* Build configuration list for PBXNativeTarget "linky" */;
+			buildPhases = (
+				63CB9B631AE6C3F300B2995A /* Sources */,
+				63CB9B641AE6C3F300B2995A /* Frameworks */,
+				63CB9B651AE6C3F300B2995A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = linky;
+			productName = linky;
+			productReference = 63CB9B671AE6C3F300B2995A /* linky.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,10 +248,24 @@
 					632CC0651ADC9C860089F8B0 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = GRFMFYY59P;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					632CC07A1ADC9C860089F8B0 = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 632CC0651ADC9C860089F8B0;
+					};
+					63CB9B661AE6C3F300B2995A = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = GRFMFYY59P;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -192,6 +284,7 @@
 			targets = (
 				632CC0651ADC9C860089F8B0 /* linky2 */,
 				632CC07A1ADC9C860089F8B0 /* linky2Tests */,
+				63CB9B661AE6C3F300B2995A /* linky */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +304,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63CB9B651AE6C3F300B2995A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CB9B6E1AE6C3F300B2995A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +337,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63CB9B631AE6C3F300B2995A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CB9B6C1AE6C3F300B2995A /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -243,6 +352,11 @@
 			isa = PBXTargetDependency;
 			target = 632CC0651ADC9C860089F8B0 /* linky2 */;
 			targetProxy = 632CC07C1ADC9C860089F8B0 /* PBXContainerItemProxy */;
+		};
+		63CB9B701AE6C3F300B2995A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63CB9B661AE6C3F300B2995A /* linky */;
+			targetProxy = 63CB9B6F1AE6C3F300B2995A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -351,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = linky2/linky2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = linky2/Info.plist;
@@ -364,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = linky2/linky2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = linky2/Info.plist;
@@ -407,6 +523,38 @@
 			};
 			name = Release;
 		};
+		63CB9B721AE6C3F300B2995A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = linky/linky.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = linky/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		63CB9B731AE6C3F300B2995A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = linky/linky.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = linky/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,6 +584,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		63CB9B741AE6C3F300B2995A /* Build configuration list for PBXNativeTarget "linky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CB9B721AE6C3F300B2995A /* Debug */,
+				63CB9B731AE6C3F300B2995A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
